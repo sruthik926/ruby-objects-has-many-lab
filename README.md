@@ -25,9 +25,9 @@ How can an author have many posts and a post belong to an author? An individual 
 
 ### Who knows about who?
 
-In order to have an artist find all of it's songs, the song class needs to know about all its song instances and a song instance needs to know about the artist class it belongs to.
+An artist should only know about its songs through the song class. If an artist instance wants to return all of its songs it will need to go through the global variable on the songs class that holds all the song instances and return only the song instances that have a reference to that artist. Think about what higher-level ruby methods you could use to select (hint hint) all the songs that belong to that artist.
 
-The same goes for an author and a post. To do this, you'll need to create a global variable that keeps track of all
+The same goes for an author and a post.
 
 #### The `#add_song_by_name` and `#add_post_by_title` Methods
 
